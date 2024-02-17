@@ -9,7 +9,14 @@ const navLinks = [
     path: "/home",
     display: "Home",
   },
-
+  {
+    path: "/doctors",
+    display: "Find a Doctor",
+  },
+  {
+    path: "/services",
+    display: "Services",
+  },
   {
     path: "/contact",
     display: "Contact",
@@ -53,7 +60,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* logo */}
           <div>
-            <img src={logo} alt="" />
+            <img src={logo} alt="" className="h-[200px] w-[200px]" />
           </div>
           {/* menu */}
           <div className="navigation one" ref={menuRef} onClick={toggleMenu}>

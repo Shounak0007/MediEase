@@ -59,15 +59,15 @@ const Tabs = ({ tab, setTab }) => {
         >
           Profile
         </button>
-        {/* <Link to="/doctors/profile/me/prescription">
-          <button 
-              onClick={()=>setShowPrescription(true)}
-              className="mt-10 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 
-              border-blue-500 hover:bg-transparent hover:text-blue-500 teansition-all duration-300">
-                Create Prescription
+        <Link to="/doctors/profile/me/prescription">
+          <button
+            onClick={() => setShowPrescription(true)}
+            className="mt-10 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 
+              border-blue-500 hover:bg-transparent hover:text-blue-500 teansition-all duration-300"
+          >
+            Create Prescription
           </button>
-
-        </Link> */}
+        </Link>
 
         <div className="mt-[50px] w-full">
           <button

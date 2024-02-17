@@ -30,7 +30,11 @@ const SidePanel = ({ doctorId, ticketPrice, timeSlots }) => {
   }, []);
 
   const confirmBooking = (timeSlot) => {
-    if (window.confirm("Do you want to confirm booking of the selected time slot?")) {
+    if (
+      window.confirm(
+        "Do you want to confirm booking of the selected time slot?"
+      )
+    ) {
       setSelectedTimeSlot(timeSlot);
       bookAppointment(timeSlot);
     }
@@ -144,11 +148,15 @@ const SidePanel = ({ doctorId, ticketPrice, timeSlots }) => {
                 <button
                   onClick={() => confirmBooking(item)}
                   className="btn px-1 rounded-md"
-                  style={{ width: '70px', height: '40px', marginTop: '20px', padding: '8px 16px' }}
+                  style={{
+                    width: "70px",
+                    height: "40px",
+                    marginTop: "20px",
+                    padding: "8px 16px",
+                  }}
                 >
                   Book
                 </button>
-
               )}
             </li>
           ))}

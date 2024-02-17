@@ -120,7 +120,6 @@ const zoomMeet = async (did) => {
 
 export const newBooking = async (req, res) => {
   const { did, uid, price, timeSlot } = req.body;
-  console.log(req.body);
   try {
     const isAlreadyBooked = await Booking.findOne({
       doctor: did,
@@ -133,7 +132,7 @@ export const newBooking = async (req, res) => {
     }
 
     const { start_url, join_url } = await zoomMeet(did);
-    console.log(start_url, join_url);
+    // console.log(start_url, join_url);
 
     const booking = new Booking({
       doctor: did,
