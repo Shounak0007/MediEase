@@ -36,8 +36,8 @@ const Home = () => {
           <img src={HIMG03} alt="" className="h-[300px]" />
           <img src={HIMG05} alt="" className="h-[250px]" />
         </div>
-        <h2 className="font-sans heading text-center text-blue-600 p-5 pb-0">
-          "Your Health, Our Mission"
+        <h2 className="text-gray-750 font-sans heading text-center p-5 pb-0">
+          <span className="orange_gradient">"Your Health, Our Mission" </span>
           <br /> The Right Platform for Online Doctor Consultation
         </h2>
       </section>

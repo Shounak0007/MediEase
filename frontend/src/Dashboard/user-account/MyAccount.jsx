@@ -52,6 +52,11 @@ const MyAccount = () => {
               </div>
 
               {/* document upload button */}
+              <Link to="/users/profile/me/documents">
+                <button className="mt-2 w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500">
+                  Upload Documents
+                </button>
+              </Link>
 
               <div className="mt-[50px] md:mt-[100px]">
                 <button
