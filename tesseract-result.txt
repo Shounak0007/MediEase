@@ -1,44 +1,29 @@
 PRESCRIPTION
 
-patient name: ATHARVA M ESH RAM
-
-sex:Male — age:21
-PCMC
-
-Prescribed Medicine
-Tab. Cetirizine
-Tab. sinarest
-Tab. Dolo 650mg
-
-Note from your doctor:
-
-Gargle with hot water two times a day. Oily food should be avoided. Do
-
-exercise.
-
-Follow up: 2024-02-13
-
-PlatformName hospital@gmail.com Contact us
-
-Dosage
-1-m,1-n
-1-n
-
-1-m, 1-n
-
-review Website
-
-DR.SACHIN PANDE
-Apollo
+DR.DOC1
+Fortis Hospital
 
 Pune
-contact:020 2683 0290
+contact:9876789876
 
-Date:2024-02-03
+patient name: PATIENT1
 
-Duration
-7days
-7days
-3days
+sex:M age:30
+Pune
+
+Date:2024-02-16
+
+Prescribed Medicine Dosage Duration
+Tab. Amoxycillin 250 mg 1M,1N 3
+Tab. MEF Plus 1M 3
+Tab. Parazex 500 1N 2
+Tab. NIMSE 100 1M,1N 5
+
+Note from your doctor:
+Take proper rest and avoid salty & sweet food.
+
+Follow up: 2024-02-26
 
 Signature
+
+MediEase medieaseconnect@gmail.com https://mediease.com
