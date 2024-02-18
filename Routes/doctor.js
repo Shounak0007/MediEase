@@ -38,7 +38,7 @@ router.post('/profile/me/sendprescription',async(req,res)=>{
           
           axios(config)
           .then(function (response) {
-            console.log(JSON.stringify(response.data));
+            // console.log(JSON.stringify(response.data));
             res.status(200).json({success: true , message : "Prescription send Successfully"})
           })
           .catch(function (error) {

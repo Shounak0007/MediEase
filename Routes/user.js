@@ -36,7 +36,7 @@ router.post('/profile/me/documents/:id',upload.single('file'), async(req,res) =>
         
         const id = req.params.id
         const newDocument = await documentModel.create({user:id, images: [req.file.path], name: req.file.filename });
-        console.log("File added to database:", newDocument);
+        // console.log("File added to database:", newDocument);
         res.status(200).json({ message: "File uploaded successfully", result:newDocument });
     } catch (error) {
         console.error("Error uploading file:", error);

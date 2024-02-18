@@ -84,7 +84,7 @@ export const getMyAppointments = async (req, res) => {
     });
     // const doctorIds = bookings.map(el => el.doctor.id)
     // const doctors = await Doctor.find({_id: {$in:doctorIds}}).select('-password')
-    console.log(bookings);
+    // console.log(bookings);
 
     res
       .status(200)

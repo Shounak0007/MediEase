@@ -31,9 +31,9 @@ export const createBooking = async (req, res) => {
         contact: "9876543210",
         name: "xyz",
         email: "abc@gmail.com",
-        doctor: doctor._id,
-        user: user._id,
-        ticketPrice: doctor.ticketPrice,
+        doctor: doctor ? doctor._id : null,
+        user: user ? user._id : null,
+        ticketPrice: doctor ? doctor.ticketPrice : null,
       });
     } else {
       res.status(400).json({ success: false, message: "Something Went Wrong" });
