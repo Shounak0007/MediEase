@@ -23,7 +23,7 @@ const DocumentUpload = ()=>{
     const formData = new FormData();
     formData.append('file', file);
     console.log('FormData:', formData);
-    console.log(formData)
+    // console.log(formData)
     try {
       const response = await axios.post(`${BASE_URL}/users/profile/me/documents/${data._id}`,formData);
 
@@ -36,14 +36,14 @@ const DocumentUpload = ()=>{
 
   const getimg = async() =>{
     const allImgs = await axios.get(`${BASE_URL}/users/profile/me/documents/${data._id}`)
-    console.log(allImgs.data.images)
+    // console.log(allImgs.data.images)
     setImage(allImgs.data.images)
   }
   return (
     <div>
       <div className='flex justify-center'>
         <input type="file" onChange={(e) =>{ 
-          console.log(e.target.files[0])
+          // console.log(e.target.files[0])
           setFile(e.target.files[0])} }/>
 
         <button 

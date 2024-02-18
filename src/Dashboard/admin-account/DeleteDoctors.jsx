@@ -50,7 +50,7 @@ const DeleteDoctors = () => {
 
   const deleteDoctor = async (userId) => {
     try {
-      console.log(userId);
+      // console.log(userId);
       const confirm = window.confirm("Are you sure you want to Delete?");
       if (confirm) {
         const response = await fetch(`${BASE_URL}/admin/deletedoctor`, {

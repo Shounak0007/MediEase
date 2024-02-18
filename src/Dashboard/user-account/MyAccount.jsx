@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { authContext } from "../../context/AuthContext";
 import MyBookings from "./MyBookings";
 import Profile from "./Profile.jsx";
@@ -16,6 +16,9 @@ const MyAccount = () => {
     loading,
     error,
   } = useGetProfile(`${BASE_URL}/users/profile/me`);
+
+  
+
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
@@ -55,18 +58,26 @@ const MyAccount = () => {
               {/* document upload button */}
               <Link to="/users/profile/me/documents">
               <button  
-              className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500"
+              className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 my-2"
               >
                   Upload Documents
               </button>
               </Link>
 
               <a href="http://127.0.0.1:8080" target="_blank" rel="noopener noreferrer">
-                <button className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white mt-4">
+                <button className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 my-2">
                   Assist AI
                 </button>
               </a>
 
+               <a href="http://127.0.0.1:8080/report" target="_blank" rel="noopener noreferrer">
+                
+              </a>
+              <Link to={'/users/profile/me/analysis'}>
+                <button className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 my-2">
+                 AI Report Analysis
+                </button>
+              </Link>
 
               <div className="mt-[50px] md:mt-[100px]">
                 <button
