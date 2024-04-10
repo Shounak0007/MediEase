@@ -19,7 +19,7 @@ const SendPrescription = () => {
 
     try {
       const res = await fetch(
-        `${BASE_URL}/doctors/profile/me/sendprescription`,
+       ` ${BASE_URL}/doctors/profile/me/sendprescription`,
         {
           method: "post",
           headers: {
@@ -48,22 +48,27 @@ const SendPrescription = () => {
 
   return (
     <>
-      <div className="relative w-[130px] h-[50px]">
-        <input
-          type="file"
-          name="document"
-          onChange={handleFileInputChange}
-          id="customFile"
-          accept=".pdf,.png,.jpg"
-          className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
-        />
-        <label
-          htmlFor="customFile"
-          className="absolute top-0 left-0 w-full h-full flex items-center px-[0.75rem] py-[0.375px] text-[15px] leading-6 overflow-hidden bg-[#0066ff46] text-headingColor font-semibold rounded-lg truncate cursor-pointer"
-        >
-          Upload PDF
-        </label>
-      </div>
+      
+        <h1 className="text-center font-semibold text-[18px] mt-20">Upload document to send on Whatsapp:</h1>
+        <div className="relative w-[130px] h-[50px] flex mx-auto mb-20 mt-5">
+          
+          <input
+            type="file"
+            name="document"
+            onChange={handleFileInputChange}
+            id="customFile"
+            accept=".pdf,.png,.jpg"
+            className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
+          />
+          <label
+            htmlFor="customFile"
+            className="w-full h-full text-white bg-blue-500 text-[18px] rounded-lg
+            flex justify-center items-center  cursor-pointer"
+          >
+            Upload PDF
+          </label>
+        </div>
+      
     </>
   );
 };

@@ -2,8 +2,9 @@ import { useContext } from "react";
 import { BiMenu } from "react-icons/bi";
 import { authContext } from "../../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import useGetProfile from '../../hooks/useFetchData.jsx'
+import useGetProfile from '../../hooks/useFetchData.jsx';
 import { BASE_URL } from "../../config.js";
+
 const Tabs = ({ tab, setTab }) => {
   const { dispatch } = useContext(authContext);
   const navigate = useNavigate();
@@ -16,6 +17,7 @@ const Tabs = ({ tab, setTab }) => {
     dispatch({ type: "LOGOUT" });
     navigate("/");
   };
+
   return (
     <div>
       <span className="lg:hidden">
@@ -39,11 +41,11 @@ const Tabs = ({ tab, setTab }) => {
               ? "bg-indigo-100 text-primaryColor"
               : "bg-transparent text-headingColor"
           } w-full btn mt-0 rounded-md shadow-sm`}
-          disabled={data.isApproved === 'cancelled' || data.isApproved === 'pending'}
-          
+          disabled={data && (data.isApproved === 'cancelled' || data.isApproved === 'pending')}
         >
-          {data.isApproved === 'cancelled' || data.isApproved === 'pending' ? <p className="cursor-not-allowed">Appointments</p> : <p>Appointments</p>}
-          
+          {data && (data.isApproved === 'cancelled' || data.isApproved === 'pending') ? 
+            <p className="cursor-not-allowed">Appointments</p> : 
+            <p>Appointments</p>}
         </button>
         <button
           onClick={() => setTab("settings")}
@@ -57,24 +59,18 @@ const Tabs = ({ tab, setTab }) => {
         </button>
         <Link to="/doctors/profile/me/prescription">
           <button 
-              onClick={()=>setShowPrescription(true)}
-              className="mt-10 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 
-              border-blue-500 hover:bg-transparent hover:text-blue-500 teansition-all duration-300">
-                Create Prescription
+            className="mt-10 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 
+            border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300">
+            Create Prescription
           </button>
-
         </Link>
-        
-         <Link to="/doctors/profile/me/sendprescription">
+        <Link to="/doctors/profile/me/sendprescription">
           <button 
-              
-              className="mt-10 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 
-              border-blue-500 hover:bg-transparent hover:text-blue-500 teansition-all duration-300">
-                Send Prescription
+            className="mt-10 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 
+            border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300">
+            Send Prescription
           </button>
-
         </Link>
-
         <div className="mt-[50px] w-full">
           <button
             onClick={handleLogout}
