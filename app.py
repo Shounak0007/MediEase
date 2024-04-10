@@ -52,7 +52,7 @@ def convert_pdf_to_png(pdf_file):
         png_files.append(png_file)
     return png_files
 
-def convert_pdf_to_png(pdf_file):
+def convert_pdf_to_png_report(pdf_file):
     images = convert_from_path(pdf_file,poppler_path=r"C:\Program Files\poppler-23.11.0\Library\bin")
     png_files = []
     for i, image in enumerate(images):
@@ -95,7 +95,7 @@ def send_message():
      
 
 def schedule_task():
-    schedule.every().day.at("11:06").do(send_message)
+    schedule.every().day.at("15:45").do(send_message)
     schedule.every().day.at("15:05").do(send_message)
     
     while True:
@@ -150,7 +150,7 @@ def upload_report():
             filename = "uploadreport.pdf"
             pdf_file = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(pdf_file)
-            png_files = convert_pdf_to_png(pdf_file)
+            png_files = convert_pdf_to_png_report(pdf_file)
             send_report()
             # redirect('http://localhost:5173/users/profile/me/analysis')
             # send_message(png_files)
