@@ -24,7 +24,7 @@ router.post('/profile/me/sendprescription',async(req,res)=>{
             "to": 919307061335,
             "filename": "Prescription.pdf",
             "document": url,
-            "caption": "Ala na bhai 🎉"
+            "caption": "Team-MediEase"
         });
 
         var config = {
