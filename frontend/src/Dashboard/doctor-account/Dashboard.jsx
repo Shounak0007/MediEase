@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Loader from "../../components/Loader/Loading";
 import Error from "../../components/Error/Error";
 import useGetProfile from "../../hooks/useFetchData";
@@ -15,6 +15,20 @@ const Dashboard = () => {
   );
 
   const [tab, setTab] = useState("overview");
+  
+    useEffect(() => {
+    // Function to reload the window once
+    const reloadWindowOnce = () => {
+      window.location.reload();
+    };
+
+    // Check if it's the initial render
+    if (loading === false && error === false) {
+      reloadWindowOnce();
+    }
+  }, [loading, error])
+ 
+
   return (
     <section>
       <div className="max-w-[1170px] px-5 mx-auto">

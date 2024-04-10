@@ -60,7 +60,7 @@ const Profile = ({doctorData}) => {
   const handleFileInputChange =async event => {
     const file=event.target.files[0];
     const data=await uploadImageToCloudinary(file);
-    console.log(data);
+    // console.log(data);
     setFormData({...formData,photo:data?.url})
   };
 

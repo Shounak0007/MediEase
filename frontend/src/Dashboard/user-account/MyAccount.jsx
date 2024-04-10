@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { authContext } from "../../context/AuthContext";
 import MyBookings from "./MyBookings";
 import Profile from "./Profile.jsx";
@@ -16,6 +16,9 @@ const MyAccount = () => {
     loading,
     error,
   } = useGetProfile(`${BASE_URL}/users/profile/me`);
+
+  
+
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
@@ -41,20 +44,38 @@ const MyAccount = () => {
                   {userData.name}
                 </h3>
                 <p className="text-textColor text-[15px] leading-6 font-medium">
-                  {userData.email}
+                {userData.email}
                 </p>
                 <p className="text-textColor text-[15px] leading-6 font-medium">
                   Blood Type :{" "}
                   <span className="ml-2 text-headingColor text-[22px] leading-8">
-                    {userData.bloodType}
+                  {userData.bloodType}
                   </span>
                 </p>
               </div>
 
+
               {/* document upload button */}
               <Link to="/users/profile/me/documents">
-                <button className="mt-2 w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500">
+              <button  
+              className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 my-2"
+              >
                   Upload Documents
+              </button>
+              </Link>
+
+              <a href="http://127.0.0.1:8080" target="_blank" rel="noopener noreferrer">
+                <button className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 my-2">
+                  Assist AI
+                </button>
+              </a>
+
+               <a href="http://127.0.0.1:8080/report" target="_blank" rel="noopener noreferrer">
+                
+              </a>
+              <Link to={'/users/profile/me/analysis'}>
+                <button className="w-full bg-blue-500 p-3 text-[16px] leading-7 rounded-md text-white hover:bg-white hover:text-blue-500 border-2 border-blue-500 my-2">
+                 AI Report Analysis
                 </button>
               </Link>
 
@@ -96,7 +117,7 @@ const MyAccount = () => {
                 </button>
               </div>
               {tab === "bookings" && <MyBookings />}
-              {tab === "settings" && <Profile user={userData} />}
+              {tab === "settings" && <Profile user = {userData}/>}
             </div>
           </div>
         )}

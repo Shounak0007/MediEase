@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@200,500,600,400,700&display=swap");
 
@@ -11,6 +11,7 @@
 body {
   font-family: "Manrope", sans-serif;
 }
+
 
 .gradient {
   height: fit-content;
@@ -37,13 +38,10 @@ body {
   opacity: 0.15;
 }
 
-.orange_gradient {
-  @apply bg-gradient-to-r from-cyan-700 via-sky-500 to-blue-900 bg-clip-text text-transparent;
-}
 
-.swiper-pagination-bullet {
-  width: 12px !important;
-  height: 12px !important;
+.swiper-pagination-bullet{
+  width:12px !important;
+  height:12px !important;
   border: 1px solid #181a1e !important;
   opacity: 100% !important;
   background: #fff !important;

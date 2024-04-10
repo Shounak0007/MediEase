@@ -15,6 +15,9 @@ import Dashboard from "../src/Dashboard/doctor-account/Dashboard";
 import ProtectedRoute from "./ProtectedRoute";
 import AdminDashboard from "../src/Dashboard/admin-account/AdminDashboard";
 import DocumentUpload from "../src/Dashboard/user-account/DocumentUpload";
+import SendPrescription from "../src/Dashboard/doctor-account/prescriptionGenerator/SendPrescription";
+import GenAi from "../src/pages/GenAi";
+
 
 const Routers = () => {
   return (
@@ -33,8 +36,10 @@ const Routers = () => {
       <Route path="/doctors/profile/me" element={<ProtectedRoute allowedRoles={['doctor']}><Dashboard /></ProtectedRoute>} />      
       <Route path="/admin/dashboard/" element={<ProtectedRoute allowedRoles={['admin']}><AdminDashboard /></ProtectedRoute>} />
       <Route path="/doctors/profile/me/prescription" element={<ProtectedRoute allowedRoles={['doctor']}><Prescription /></ProtectedRoute>} /> 
-     
+     <Route path="/doctors/profile/me/sendprescription" element={<ProtectedRoute allowedRoles={['doctor']}><SendPrescription /></ProtectedRoute>} /> 
+      <Route path="/users/profile/me/analysis" element={<ProtectedRoute allowedRoles={['patient']}><GenAi /></ProtectedRoute>} /> 
     </Routes>
+    
   );
 };
 
