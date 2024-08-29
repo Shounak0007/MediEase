@@ -32,7 +32,7 @@ and personalized medication reminders, our platform aims to revolutionize health
 
 
 <div align="center">
-<img align="center" src="feature/frontend/TheEnd/Frontend/src/assets/images/home_page.png" alt="Home Screen" width="600" height="300" >
+<img align="center" src="feature/frontend/TheEnd/src/assets/images/home_page.png" alt="Home Screen" width="600" height="300" >
 <p align="center"><em>Home Screen</em></p>
 <br>
 </div>
