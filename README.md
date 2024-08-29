@@ -31,9 +31,9 @@ and personalized medication reminders, our platform aims to revolutionize health
 ## Screenshots
 
 
-<div align="center">
-<img align="center" src="https://github.com/Shounak0007/MediEase/tree/feature/frontend/TheEnd/src/assets/images/home_page.png" alt="Home Screen" width="600" height="300" >
-<p align="center"><em>Home Screen</em></p>
+<div align="center" dir="auto">
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/Shounak0007/MediEase/tree/feature/frontend/TheEnd/src/assets/images/home_page.png"><img align="center" alt="Home Screen" width="600" height="300" style="max-width: 100%;" href="https://github.com/Shounak0007/MediEase/tree/feature/frontend/TheEnd/src/assets/images/home_page.png"></a>
+<p align="center" dir="auto"><em>Home Screen</em></p>
 <br>
 </div>
 <div align="center">
