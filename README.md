@@ -14,7 +14,7 @@ Management
 <!--     <a href=""><strong> Explore Project Documentation »</strong></a> -->
 <!--     <br /> -->
     <br />
-    <a href="https://drive.google.com/drive/u/1/folders/1_MmmGY_l7jJktSG3VWPnL3c9qgJIzIWO">Watch Insights »</a>
+    <a href="https://drive.google.com/drive/folders/1cXlvlufvGAipFj9sM-sRYrHmHDMi_v0a?usp=sharing">Watch Insights »</a>
 
   </p>
 </div>
